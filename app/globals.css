@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fcfaf8;
   --foreground: #171717;
 }
 
@@ -17,5 +17,61 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
+
+@layer utilities {
+  .card-wrapper-1::before {
+    background: conic-gradient(
+      rgba(41, 172, 228, 0.4) 0deg,
+      rgba(41, 172, 228, 0.9) 0deg,
+      rgba(141, 222, 240, 0.4) 10deg,
+      transparent 80deg
+    );
+    @apply absolute h-[300%] w-[150%] content-[''] top-[-100%] left-[-25%] animate-border-spin
+  }
+  .card-wrapper-2::before {
+    background: conic-gradient(
+      rgba(242, 51, 140, 0.4) 0deg,
+      rgba(242, 51, 140, 0.9) 0deg,
+      rgba(240, 151, 240, 0.4) 10deg,
+      transparent 80deg
+    );
+    @apply absolute h-[300%] w-[150%] content-[''] top-[-100%] left-[-25%] animate-border-spin
+  }
+  .card-wrapper-3::before {
+    background: conic-gradient(
+      rgba(234, 190, 32, 0.4) 0deg,
+      rgba(234, 190, 32, 0.9) 0deg,
+      rgba(244, 220, 132, 0.4) 10deg,
+      transparent 80deg
+    );
+    @apply absolute h-[300%] w-[150%] content-[''] top-[-100%] left-[-25%] animate-border-spin
+  }
+
+  .wrapper-badge:hover::before {
+    background: conic-gradient(
+      rgba(242, 240, 240, 0.9) 0deg,
+      rgba(242, 240, 240, 0.5) 150deg,
+      transparent 120deg
+    );
+    @apply absolute h-[600%] w-[200%] content-[''] top-[-140%] left-[-50%] animate-badge-spin
+  }
+
+  .wrapper-badge::before {
+    background: white;
+    opacity: 0.7;
+    @apply absolute h-[700%] w-[200%] content-[''] top-[-140%] left-[-50%] 
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
