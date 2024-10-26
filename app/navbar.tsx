@@ -35,7 +35,7 @@ export default function NavigationBar() {
 
   return (
     <Navbar
-      className="py-6 sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-black"
+      className="py-6 fixed sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-transparent"
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="sm:hidden block px-8">
@@ -49,7 +49,7 @@ export default function NavigationBar() {
       >
         <NavbarItem>
           <Link
-            className="focus:outline-none"
+            className="focus:outline-none cursor-pointer"
             onClick={() => scrollToSection(aboutRef)}
           >
             About
@@ -57,7 +57,7 @@ export default function NavigationBar() {
         </NavbarItem>
         <NavbarItem isActive>
           <Link
-            className="focus:outline-none"
+            className="focus:outline-none cursor-pointer"
             onClick={() => scrollToSection(projectsRef)}
           >
             Projects
@@ -65,7 +65,7 @@ export default function NavigationBar() {
         </NavbarItem>
         <NavbarItem isActive>
           <Link
-            className="focus:outline-none"
+            className="focus:outline-none cursor-pointer"
             onClick={() => scrollToSection(projectsRef)}
           >
             Contact
