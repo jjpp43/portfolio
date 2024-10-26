@@ -48,16 +48,27 @@ export default function NavigationBar() {
         justify="center"
       >
         <NavbarItem>
-          <Link color="foreground" onClick={() => scrollToSection(aboutRef)}>
+          <Link
+            className="focus:outline-none"
+            onClick={() => scrollToSection(aboutRef)}
+          >
             About
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link
-            aria-current="page"
+            className="focus:outline-none"
             onClick={() => scrollToSection(projectsRef)}
           >
             Projects
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link
+            className="focus:outline-none"
+            onClick={() => scrollToSection(projectsRef)}
+          >
+            Contact
           </Link>
         </NavbarItem>
       </NavbarContent>
