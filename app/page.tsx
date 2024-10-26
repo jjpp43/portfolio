@@ -6,6 +6,9 @@ import { useRef } from "react";
 import Link from "next/link";
 
 export default function Home() {
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+
   return (
     <div className="w-screen bg-black">
       <div className="flex flex-col p-8 sm:px-20 sm:p-10 md:px-24 md:p-12 lg:px-28 lg:p-14 xl:px-32 xl:p-16">
@@ -62,9 +65,12 @@ export default function Home() {
           </div>
         </div>
         {/* About Section */}
-        <div className="flex flex-col justify-start items-center py-16 md:py-24 lg:py-28 xl:py-32 text-4xl font-semibold">
+        <div
+          ref={aboutRef}
+          className="flex flex-col justify-start items-center py-16 md:py-24 lg:py-28 xl:py-32 text-4xl font-semibold"
+        >
           <div className="py-16">About</div>
-          <div className="flex flex-row ">
+          <div className="flex flex-row gap-4">
             <div className="flex flex-col items-end">
               <div className="grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
                 <Image
@@ -120,7 +126,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-center py-16 md:py-24 lg:py-28 xl:py-32 pt-64 text-4xl font-semibold">
+        <div
+          ref={projectsRef}
+          className="flex flex-row justify-center py-16 md:py-24 lg:py-28 xl:py-32 pt-64 text-4xl font-semibold"
+        >
           Projects
         </div>
         {/* Project Card Area */}
