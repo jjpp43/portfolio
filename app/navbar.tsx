@@ -31,7 +31,7 @@ export default function NavigationBar() {
 
   return (
     <Navbar
-      className="py-4 sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-black"
+      className="py-6 sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-black"
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="sm:hidden block px-8">
