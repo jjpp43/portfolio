@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import {
   Navbar,
@@ -16,6 +15,9 @@ import {
 export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   const menuItems = [
     "Profile",
     "Dashboard",
