@@ -11,9 +11,11 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
+import { useScroll } from "./components/scrollContext";
 
 export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { aboutRef, projectsRef } = useScroll();
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -46,18 +48,16 @@ export default function NavigationBar() {
         justify="center"
       >
         <NavbarItem>
-          <Link color="foreground" href="#" className="">
+          <Link color="foreground" onClick={() => scrollToSection(aboutRef)}>
             About
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link
+            aria-current="page"
+            onClick={() => scrollToSection(projectsRef)}
+          >
             Projects
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Work
           </Link>
         </NavbarItem>
       </NavbarContent>

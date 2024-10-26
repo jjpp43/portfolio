@@ -2,12 +2,11 @@
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import Badge from "./components/badge";
-import { useRef } from "react";
 import Link from "next/link";
+import { useScroll } from "./components/scrollContext";
 
 export default function Home() {
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
+  const { aboutRef, projectsRef } = useScroll();
 
   return (
     <div className="w-screen bg-black">

@@ -3,6 +3,7 @@ import "./globals.css";
 import { Raleway } from "next/font/google";
 import NavigationBar from "./navbar";
 import Footer from "./footer";
+import { ScrollProvider } from "./components/scrollContext";
 
 // Import google fonts
 const raleway = Raleway({
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={raleway.className}>
-        <NavigationBar />
-        {children}
-        <Footer />
+        <ScrollProvider>
+          <NavigationBar />
+          {children}
+          <Footer />
+        </ScrollProvider>
       </body>
     </html>
   );
