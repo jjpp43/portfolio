@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="flex flex-col items-start py-16 px-8 sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-black">
       <div className="flex flex-col"></div>
       {/* Github Icon */}
-      <a
+      {/* <a
         href="https://github.com/jjpp43" // Replace with your GitHub profile URL
         target="_blank" // Opens link in a new tab
         rel="noopener noreferrer"
@@ -20,7 +20,7 @@ export default function Footer() {
             />
           </div>
         </div>
-      </a>
+      </a> */}
       {/* Copyright & Portfolio */}
       <div className="flex flex-row w-full justify-between">
         <div>&copy;Junna Park, All Rights Reserved.</div>
