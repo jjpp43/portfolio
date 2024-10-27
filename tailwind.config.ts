@@ -25,11 +25,16 @@ const config: Config = {
         rotate: 'rotate 2s linear infinite',
         'border-spin':'border-spin 6s linear infinite',
         'badge-spin':'border-spin 2.5s linear infinite',
+        slideDown: 'slideDown 0.5s ease-in-out forwards',
       },
       transitionDelay: {
         'delay-200':'delay-100'
       },
       keyframes: {
+        slideDown: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)'},
+        },
         bounce: {
           '0%, 100%': { marginTop: '0' },
           '50%': { marginTop: '1px' },

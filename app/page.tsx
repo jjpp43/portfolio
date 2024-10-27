@@ -4,9 +4,13 @@ import { TypeAnimation } from "react-type-animation";
 import Badge from "./components/badge";
 import Link from "next/link";
 import { useScroll } from "./components/scrollContext";
+import { Divider } from "@nextui-org/react";
 
 export default function Home() {
-  const { aboutRef, projectsRef } = useScroll();
+  const { aboutRef, projectsRef, contactRef } = useScroll();
+  const email = "junnapark@gmail.com";
+  const subject = "[Project Request]";
+  const mailtoLink = `mailto:${email}?subject${encodeURIComponent(subject)}`;
 
   return (
     <div className="w-screen bg-black">
@@ -214,6 +218,67 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex flex-row "></div>
+        </div>
+        {/* Contact Section */}
+        <div
+          ref={contactRef}
+          className="flex flex-col justify-start items-center py-16 md:py-24 lg:py-28 xl:py-32 text-4xl font-semibold"
+        >
+          <div className="py-16">Contact</div>
+          <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 lg:gap-12 xl:gap-16">
+            {/* First Element */}
+            <a href={mailtoLink}>
+              <div className="relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
+                <Divider />
+                <div className="flex flex-row justify-between items-center group-hover:px-4 transition-all duration-300">
+                  <div className="z-10 text-2xl font-medium transition-all duration-300 group-hover:text-black ">
+                    Email
+                  </div>
+                  <svg
+                    className="z-10 fill-white group-hover:fill-black transition-all duration-300"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"></path>
+                  </svg>
+                </div>
+                <div className="z-10 text-base font-normal group-hover:px-4 text-gray-400 group-hover:text-black transition-all duration-300">
+                  junnapark@gmail.com
+                </div>
+
+                <div className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-in-out transform -translate-y-full group-hover:translate-y-0"></div>
+              </div>
+            </a>
+            {/* Second Element */}
+            <a href={mailtoLink}>
+              <div className="relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
+                <Divider />
+                <div className="flex flex-row justify-between items-center group-hover:px-4 transition-all duration-300">
+                  <div className="z-10 text-2xl font-medium transition-all duration-300 group-hover:text-black ">
+                    Github
+                  </div>
+                  <svg
+                    className="z-10 fill-white group-hover:fill-black transition-all duration-300"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"></path>
+                  </svg>
+                </div>
+                <div className="z-10 text-base font-normal group-hover:px-4 text-gray-400 group-hover:text-black transition-all duration-300">
+                  jjpp43
+                </div>
+
+                <div className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-in-out transform -translate-y-full group-hover:translate-y-0"></div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
