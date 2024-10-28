@@ -129,13 +129,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="py-16"></div>
+        {/* Project Section */}
         <div
           ref={projectsRef}
-          className="flex flex-row justify-center py-16 md:py-24 lg:py-28 xl:py-32 pt-64 text-4xl font-semibold"
+          className="flex flex-row justify-center py-16 text-4xl font-semibold"
         >
           Projects
         </div>
-        {/* Project Card Area */}
+
         <div
           id="card container"
           className="flex flex-col px-16 md:px-24 lg:px-28 xl:px-32"
@@ -144,6 +146,7 @@ export default function Home() {
             id="firstRow"
             className="flex flex-col lg:flex-row xl:flex-row justify-between gap-8 lg:gap-12 xl:gap-16"
           >
+            {/* Project Card 1 */}
             <Link
               href="https://pathway-ten.vercel.app"
               className="h-full w-full"
@@ -170,6 +173,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+            {/* Project Card 2 */}
             <Link href="/your-target-url" className="h-full w-full">
               <div className="card-wrapper-2 overflow-hidden bg-gray-800 rounded-lg relative w-full h-72 hover:scale-105 transition-transform ease-in-out duration-300">
                 <div className="card-content absolute rounded-lg bg-transparent top-[1.5px] left-[1.5px] w-[calc(100%-3px)] h-[calc(100%-3px)]">
@@ -193,6 +197,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+            {/* Project Card 3 */}
             <Link href="/your-target-url" className="h-full w-full">
               <div className="card-wrapper-3 overflow-hidden bg-gray-800 rounded-lg relative w-full h-72 hover:scale-105 transition-transform ease-in-out duration-300">
                 <div className="card-content absolute rounded-lg bg-custom-gradient top-[1.5px] left-[1.5px] w-[calc(100%-3px)] h-[calc(100%-3px)]">
@@ -217,8 +222,8 @@ export default function Home() {
               </div>
             </Link>
           </div>
-          <div className="flex flex-row "></div>
         </div>
+        <div className="py-16"></div>
         {/* Contact Section */}
         <div
           ref={contactRef}
@@ -253,7 +258,7 @@ export default function Home() {
               </div>
             </a>
             {/* Second Element */}
-            <a href={mailtoLink}>
+            <a href="https://github.com/jjpp43">
               <div className="relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
                 <Divider />
                 <div className="flex flex-row justify-between items-center group-hover:px-4 transition-all duration-300">
