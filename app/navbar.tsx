@@ -12,7 +12,6 @@ import {
   Button,
 } from "@nextui-org/react";
 import { useScroll } from "./components/scrollContext";
-import menuIcon from "../public/menu.svg";
 import { MenuIcon } from "./components/menuIcon";
 
 export default function NavigationBar() {
@@ -26,20 +25,19 @@ export default function NavigationBar() {
 
   return (
     <Navbar
-      className="py-6 z-50 sm::fixed md::fixed lg:fixed xl:fixed sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-transparent"
+      className="py-6 z-40 sm:fixed md:fixed lg:fixed xl:fixed sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-black sm:bg-transparent md:bg-transparent lg:bg-transparent xl:bg-transparent"
       onMenuOpenChange={setIsMenuOpen}
-      disableAnimation
     >
       <NavbarContent className="sm:hidden block px-8">
-        <NavbarMenuToggle icon={MenuIcon} srOnlyText=" " />
+        <NavbarMenuToggle srOnlyText=" " icon={MenuIcon} />
       </NavbarContent>
       <NavbarContent
-        className="hidden sm:flex gap-12 underline underline-offset-8 mix-blend-difference"
+        className="hidden sm:flex gap-12 underline underline-offset-8 "
         justify="center"
       >
         <NavbarItem>
           <Link
-            className="focus:outline-none cursor-pointer"
+            className="z-20focus:outline-none cursor-pointer"
             onClick={() => scrollToSection(aboutRef)}
           >
             <div className="">About</div>
@@ -63,7 +61,7 @@ export default function NavigationBar() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu data-menu-open={isMenuOpen}>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
@@ -77,7 +75,9 @@ export default function NavigationBar() {
               className="w-full"
               href="#"
               size="lg"
-            ></Link>
+            >
+              {item}
+            </Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
