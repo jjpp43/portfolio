@@ -174,12 +174,20 @@ export default function Home() {
               </div>
             </Link>
             {/* Project Card 2 */}
-            <Link href="/your-target-url" className="h-full w-full">
+            <Link
+              href="https://travel-korea.vercel.app"
+              className="h-full w-full"
+            >
               <div className="card-wrapper-2 overflow-hidden bg-gray-800 rounded-lg relative w-full h-72 hover:scale-105 transition-transform ease-in-out duration-300">
                 <div className="card-content absolute rounded-lg bg-transparent top-[1.5px] left-[1.5px] w-[calc(100%-3px)] h-[calc(100%-3px)]">
                   <div className="flex flex-col justify-between rounded-lg h-full bg-custom-gradient">
                     <div className="p-4">
-                      <Image src="/title.png" alt="" width="200" height="110" />
+                      <Image
+                        src="/title2.png"
+                        alt=""
+                        width="200"
+                        height="110"
+                      />
                     </div>
                     <div>
                       <div className="flex flex-row">
