@@ -192,13 +192,13 @@ export default function Home() {
                     <div>
                       <div className="flex flex-row">
                         <div className="p-2 px-4 font-semibold text-lg">
-                          Pathway US
+                          Travel Korea
                         </div>
                         <Image alt="" src="/link.svg" width={24} height={24} />
                       </div>
                       <div className="p-4 pt-0 text-gray-400 text-sm">
-                        A comprehensive platform offering detailed information
-                        and comparisons for universities.
+                        Editorially designed landing page for tourists,
+                        highlighting South Korea’s iconic cities.
                       </div>
                     </div>
                   </div>
