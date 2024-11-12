@@ -1,4 +1,4 @@
-import type Metadata from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 import NavigationBar from "./navbar";
 import Footer from "./footer";
