@@ -5,7 +5,7 @@ import Badge from "./components/badge";
 import Link from "next/link";
 import { useScroll } from "./components/scrollContext";
 import { Divider } from "@nextui-org/react";
-import { pixelify } from "./fonts";
+import { pixelify } from "./fonts"; // For future use
 
 export default function Home() {
   const { aboutRef, projectsRef, contactRef } = useScroll();
@@ -93,6 +93,7 @@ export default function Home() {
                   src="/profile.png"
                   width="300"
                   height="360"
+                  loading="lazy"
                 />
               </div>
               <div className="flex flex-row items-center">
