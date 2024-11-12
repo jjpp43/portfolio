@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Raleway } from "next/font/google";
 import NavigationBar from "./navbar";
 import Footer from "./footer";
 import { ScrollProvider } from "./components/scrollContext";
-
-// Import google fonts
-const raleway = Raleway({
-  subsets: ["latin"],
-  display: "swap",
-});
+import { raleway } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Software Developer Portfolio",
@@ -23,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={raleway.className}>
+      <body className={`${raleway.className}`}>
         <ScrollProvider>
           <NavigationBar />
           {children}

@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['Raleway', 'sans-serif'],
+        pixelify: ['Pixelify Sans', 'sans-serif'],
       },
       colors: {
         background: "var(--background)",
