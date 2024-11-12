@@ -34,14 +34,14 @@ export default function NavigationBar() {
       className="relative pt-6 z-40 sm:fixed md:fixed lg:fixed xl:fixed sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-transparent w-screen"
     >
       <div>
-        {[...Array(66)].map((_, index) => (
+        {[...Array(33)].map((_, index) => (
           <div
             key={index}
-            className="absolute h-[1px] w-full"
+            className="absolute h-[2px] w-full"
             style={{
-              bottom: `${index}px`, // Dynamic bottom
-              backdropFilter: `blur(${Math.min(index * 0.1, 12)}px)`, // Gradual blur, max blur 12px
-              backgroundColor: `rgba(0, 0, 0, ${Math.min(index * 0.01, 1)})`,
+              bottom: `${index * 2}px`, // Dynamic bottom
+              backdropFilter: `blur(${Math.min(index * 0.2, 12)}px)`, // Gradual blur, max blur 12px
+              backgroundColor: `rgba(0, 0, 0, ${Math.min(index * 0.02, 1)})`,
             }}
           ></div>
         ))}
