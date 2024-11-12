@@ -31,8 +31,21 @@ export default function NavigationBar() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="py-6 z-40 sm:fixed md:fixed lg:fixed xl:fixed sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-black sm:bg-transparent md:bg-transparent lg:bg-transparent xl:bg-transparent"
+      className="relative pt-6 z-40 sm:fixed md:fixed lg:fixed xl:fixed sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-transparent w-screen"
     >
+      <div>
+        {[...Array(66)].map((_, index) => (
+          <div
+            key={index}
+            className="absolute h-[1px] w-full"
+            style={{
+              bottom: `${index}px`, // Dynamic bottom
+              backdropFilter: `blur(${Math.min(index * 0.1, 12)}px)`, // Gradual blur, max blur 12px
+              backgroundColor: `rgba(0, 0, 0, ${Math.min(index * 0.01, 1)})`,
+            }}
+          ></div>
+        ))}
+      </div>
       <NavbarContent className="sm:hidden block px-8">
         <NavbarMenuToggle
           srOnlyText=" "
@@ -47,11 +60,11 @@ export default function NavigationBar() {
             onClick={() => scrollToSection(aboutRef)}
           >
             <div className="relative flex flex-col group overflow-hidden">
-              <div className="z-10 p-1 group-hover:px-2 transition-all duration-300 group-hover:text-black">
+              <div className="z-10 p-2 group-hover:px-4 transition-all duration-300 group-hover:text-background">
                 About
               </div>
               <Divider />
-              <div className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
+              <div className="absolute inset-0 bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
             </div>
           </Link>
         </NavbarItem>
@@ -61,11 +74,11 @@ export default function NavigationBar() {
             onClick={() => scrollToSection(projectsRef)}
           >
             <div className="relative flex flex-col group overflow-hidden">
-              <div className="z-10 p-1 group-hover:px-2 transition-all duration-300 group-hover:text-black">
+              <div className="z-10 p-2 group-hover:px-4 transition-all duration-300 group-hover:text-background">
                 Projects
               </div>
               <Divider />
-              <div className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
+              <div className="absolute inset-0 bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
             </div>
           </Link>
         </NavbarItem>
@@ -75,11 +88,11 @@ export default function NavigationBar() {
             onClick={() => scrollToSection(projectsRef)}
           >
             <div className="relative flex flex-col group overflow-hidden">
-              <div className="z-10 p-1 group-hover:px-2 transition-all duration-300 group-hover:text-black">
+              <div className="z-10 p-2 group-hover:px-4 transition-all duration-300 group-hover:text-background">
                 Contact
               </div>
               <Divider />
-              <div className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
+              <div className="absolute inset-0 bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
             </div>
           </Link>
         </NavbarItem>
