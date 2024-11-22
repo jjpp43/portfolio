@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useScroll } from "./components/scrollContext";
 import { Divider } from "@nextui-org/react";
 import { pixelify } from "./fonts"; // For future use
+import { grotesque } from "./fonts";
 
 export default function Home() {
   const { aboutRef, projectsRef, contactRef } = useScroll();
@@ -16,26 +17,33 @@ export default function Home() {
   return (
     <div className="w-screen bg-background pt-4">
       <div className="flex flex-col p-8 sm:px-20 sm:p-10 md:px-24 md:p-12 lg:px-28 lg:p-14 xl:px-32 xl:p-16">
-        <div className="flex flex-row justify-between">
-          <div className="font-normal text-foreground text-[10vw]">
-            <TypeAnimation
-              sequence={["Hard", 500, "Software", 1000]}
-              speed={10}
-              style={{ display: "inline-block" }}
-            />
+        <div className="">
+          <div className="flex flex-row justify-between ">
+            <div className="font-normal text-foreground text-[10vw]">
+              <TypeAnimation
+                sequence={["Hard", 500, "Software", 1000]}
+                speed={5}
+                style={{ display: "inline-block" }}
+                repeat={1}
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex flex-row justify-end">
-          <div className="font-normal text-foreground text-[10vw]">
-            Developer
+          <div className="flex flex-row justify-end">
+            <div className="font-normal text-foreground text-[10vw]">
+              Developer
+            </div>
           </div>
         </div>
         <div className="flex flex-row justify-center py-20">
           {/* TextBox Area */}
           <div className="font-normal text-gray-400 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed max-w-screen-sm">
-            Hello, I'm <strong className="text-foreground">Junna Park</strong>,
-            specializing in building modern, responsive websites. I love turning
-            ideas into <strong className="text-foreground">reality.</strong>
+            Hello, I'm{" "}
+            <strong className="text-foreground font-grotesque">
+              Junna Park
+            </strong>
+            , specializing in building modern, responsive websites. I love
+            turning ideas into{" "}
+            <strong className="text-foreground font-grotesque">reality.</strong>
           </div>
           {/* Bouncing Arrow */}
           <div id="arrow" className="flex flex-col p-4 py-8 animate-bounce ">

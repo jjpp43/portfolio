@@ -16,6 +16,7 @@ const config: Config = {
       fontFamily: {
         sans: ['Raleway', 'sans-serif'],
         pixelify: ['Pixelify Sans', 'sans-serif'],
+        grotesque: ['Bricolage Grotesque', 'sans-serif']
       },
       colors: {
         background: "var(--background)",
@@ -52,6 +53,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ preferredStrategy: 'pseudoelements' }),
+],
 };
 export default config;
