@@ -37,13 +37,13 @@ export default function Home() {
           {/* TextBox Area */}
           <div className="font-normal text-gray-400 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed max-w-screen-sm">
             Hello, I'm{" "}
-            <strong className="text-foreground font-grotesque inline-block relative">
+            <strong className="text-foreground font-grotesque text-xl md:text-2xl lg:text-3xl xl:text-4xl inline-block relative">
               {/* Invisible placeholder for reserving space */}
               <span
                 aria-hidden="true"
                 className="invisible block whitespace-nowrap"
               >
-                Junna .Park
+                Junna Park
               </span>
 
               {/* Animated text */}
@@ -57,7 +57,7 @@ export default function Home() {
             </strong>
             , specializing in building modern, responsive websites. I love
             turning ideas into{" "}
-            <strong className="text-foreground font-grotesque">
+            <strong className="text-foreground font-grotesque text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               <TypeAnimation
                 cursor={false}
                 sequence={["reality.", 1000]}
