@@ -3,33 +3,32 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import Badge from "./components/badge";
 import Link from "next/link";
-import { useScroll } from "./components/scrollContext";
+import { useClickScroll } from "./components/scrollContext";
 import { Divider } from "@nextui-org/react";
-import { pixelify } from "./fonts"; // For future use
-import { grotesque } from "./fonts";
+import { motion, useScroll } from "motion/react";
 
 export default function Home() {
-  const { aboutRef, projectsRef, contactRef } = useScroll();
+  const { aboutRef, projectsRef, contactRef } = useClickScroll();
   const email = "junnapark@gmail.com";
   const subject = "[Project Request]";
   const mailtoLink = `mailto:${email}?subject${encodeURIComponent(subject)}`;
-
+  const { scrollYProgress } = useScroll();
   return (
     <div className="w-screen bg-background pt-4">
       <div className="flex flex-col p-8 sm:px-20 sm:p-10 md:px-24 md:p-12 lg:px-28 lg:p-14 xl:px-32 xl:p-16">
         <div className="">
           <div className="flex flex-row justify-between ">
-            <div className="font-normal text-foreground text-[10vw]">
+            <div className="font-normal text-foreground text-[9vw]">
               <TypeAnimation
                 sequence={["Hard", 500, "Software", 1000]}
-                speed={5}
+                speed={3}
                 style={{ display: "inline-block" }}
                 repeat={1}
               />
             </div>
           </div>
           <div className="flex flex-row justify-end">
-            <div className="font-normal text-foreground text-[10vw]">
+            <div className="font-normal text-foreground text-[9vw]">
               Developer
             </div>
           </div>
@@ -38,12 +37,34 @@ export default function Home() {
           {/* TextBox Area */}
           <div className="font-normal text-gray-400 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed max-w-screen-sm">
             Hello, I'm{" "}
-            <strong className="text-foreground font-grotesque">
-              Junna Park
+            <strong className="text-foreground font-grotesque inline-block relative">
+              {/* Invisible placeholder for reserving space */}
+              <span
+                aria-hidden="true"
+                className="invisible block whitespace-nowrap"
+              >
+                Junna .Park
+              </span>
+
+              {/* Animated text */}
+              <TypeAnimation
+                cursor={false}
+                sequence={["Junna Park", 1000]}
+                speed={5}
+                style={{ display: "inline-block", whiteSpace: "nowrap" }}
+                repeat={1}
+              />
             </strong>
             , specializing in building modern, responsive websites. I love
             turning ideas into{" "}
-            <strong className="text-foreground font-grotesque">reality.</strong>
+            <strong className="text-foreground font-grotesque">
+              <TypeAnimation
+                cursor={false}
+                sequence={["reality.", 1000]}
+                speed={1}
+                style={{ display: "inline-block" }}
+              />
+            </strong>
           </div>
           {/* Bouncing Arrow */}
           <div id="arrow" className="flex flex-col p-4 py-8 animate-bounce ">

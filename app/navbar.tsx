@@ -12,7 +12,7 @@ import {
   Button,
   Divider,
 } from "@nextui-org/react";
-import { useScroll } from "./components/scrollContext";
+import { useClickScroll } from "./components/scrollContext";
 import { MenuIcon } from "./components/menuIcon";
 
 export default function NavigationBar() {
@@ -20,7 +20,7 @@ export default function NavigationBar() {
     (current) => !current,
     false
   );
-  const { aboutRef, projectsRef } = useScroll();
+  const { aboutRef, projectsRef } = useClickScroll();
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -33,7 +33,7 @@ export default function NavigationBar() {
       onMenuOpenChange={setIsMenuOpen}
       className="relative pt-6 z-40 sm:fixed md:fixed lg:fixed xl:fixed sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-transparent w-screen"
     >
-      <div>
+      <div className="">
         {[...Array(33)].map((_, index) => (
           <div
             key={index}

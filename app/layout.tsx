@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavigationBar from "./navbar";
 import Footer from "./footer";
-import { ScrollProvider } from "./components/scrollContext";
+import { ScrollProvider, ScrollProgress } from "./components/scrollContext";
 import { raleway } from "./fonts";
 
 export const metadata: Metadata = {
@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.className} `}>
+        <ScrollProgress />
         <ScrollProvider>
           <NavigationBar />
           {children}
