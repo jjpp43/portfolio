@@ -20,31 +20,32 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.sign{
+.appear-down-to-up {
+  animation: appear-up 1s ease-in-out;
+  animation-timeline: view(); /* This ties the animation to scrolling */
+  animation-range: entry 0% cover 30%;
+}
 
-  
+.appear-left-to-right {
+  animation: appear-left 1s ease-in-out;
+  animation-timeline: view(); /* This ties the animation to scrolling */
+  animation-range: entry 0% cover 30%;
+}
+
+.appear-right-to-left {
+  animation: appear-right 1s ease-in-out;
+  animation-timeline: view(); /* This ties the animation to scrolling */
+  animation-range: entry 0% cover 30%;
+}
+
+.appear-unfold {
+  animation: unfold 1s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 
 @layer utilities {
-  .scrollbar::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
-  }
-
-  .scrollbar::-webkit-scrollbar-track {
-    border-radius: 100vh;
-    background: #e6a612;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb {
-    background: #db0808;
-    border-radius: 100vh;
-    border: 3px solid #f6f7ed;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #c0a0b9;
-  }
+  
   .card-wrapper-1::before {
     background: conic-gradient(
       rgba(41, 172, 228, 0.4) 0deg,
@@ -98,4 +99,49 @@ body {
   }
 }
 
+@keyframes appear-up {
+  from {
+    opacity: 0;
+    transform: scale(0.7); /* Use transform for scaling */
+    transform-origin: bottom; /* Ensure it scales up from bottom */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
+@keyframes appear-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30%);
+    transform-origin: left; /* Ensure it scales up from bottom */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-right {
+  from {
+    opacity: 0;
+    transform: translateX(30%);
+    transform-origin: right; /* Ensure it scales up from bottom */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes unfold {
+  from {
+    opacity: 0.5;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

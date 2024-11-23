@@ -107,7 +107,7 @@ export default function Home() {
             <div className="flex flex-col items-end">
               <div className="grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
                 <Image
-                  className="rounded-lg"
+                  className="rounded-lg appear-left-to-right "
                   alt=""
                   src="/profile.png"
                   width="300"
@@ -135,23 +135,23 @@ export default function Home() {
                 {/* Skill Section */}
                 <div className="p-4 pt-0 text-3xl">Skills</div>
                 {/* First Row */}
-                <div className="flex flex-row flex-wrap pb-2 gap-2 px-4 font-normal text-sm ">
+                <div className="appear-right-to-left flex flex-row flex-wrap pb-2 gap-2 px-4 font-normal text-sm ">
                   <Badge icon="javascript" label="javascript" />
                   <Badge icon="nextjs" label="next.js" />
                 </div>
                 {/* Second Row */}
-                <div className="flex flex-row flex-wrap pb-2 gap-2 px-4 font-normal text-sm ">
+                <div className="appear-right-to-left flex flex-row flex-wrap pb-2 gap-2 px-4 font-normal text-sm ">
                   <Badge icon="react" label="react" />
                   <Badge icon="nodejs" label="node.js" />
                 </div>
                 {/* Third Row */}
-                <div className="flex flex-row pb-2 gap-2 px-4 font-normal text-sm ">
+                <div className="appear-right-to-left flex flex-row pb-2 gap-2 px-4 font-normal text-sm ">
                   <Badge icon="aws" label="AWS Solutions Architect" />
                 </div>
                 {/* Tool Section */}
                 <div className="p-4 pt-8 text-3xl">Tools</div>
                 {/* First Row */}
-                <div className="flex flex-row flex-wrap pb-2 gap-2 px-4 font-normal text-sm ">
+                <div className="appear-right-to-left flex flex-row flex-wrap pb-2 gap-2 px-4 font-normal text-sm ">
                   <Badge icon="figma" label="figma" />
                   <Badge icon="notion" label="notion" />
                   <Badge icon="slack" label="slack" />
@@ -164,7 +164,7 @@ export default function Home() {
         {/* Project Section */}
         <div
           ref={projectsRef}
-          className="flex flex-row justify-center py-16 text-4xl font-semibold"
+          className=" flex flex-row justify-center py-16 text-4xl font-semibold"
         >
           Projects
         </div>
@@ -180,7 +180,7 @@ export default function Home() {
             {/* Project Card 1 */}
             <Link
               href="https://pathway-ten.vercel.app"
-              className="h-full w-full"
+              className="h-full w-full appear-down-to-up"
             >
               <div className="card-wrapper-1 overflow-hidden bg-gray-800 rounded-lg relative w-full h-72 hover:scale-105 transition-transform ease-in-out duration-300">
                 <div className="card-content absolute rounded-lg bg-background top-[1.5px] left-[1.5px] w-[calc(100%-3px)] h-[calc(100%-3px)] ">
@@ -207,7 +207,7 @@ export default function Home() {
             {/* Project Card 2 */}
             <Link
               href="https://travel-korea.vercel.app"
-              className="h-full w-full"
+              className="h-full w-full appear-down-to-up"
             >
               <div className="card-wrapper-2 overflow-hidden bg-gray-800 rounded-lg relative w-full h-72 hover:scale-105 transition-transform ease-in-out duration-300">
                 <div className="card-content absolute rounded-lg bg-background top-[1.5px] left-[1.5px] w-[calc(100%-3px)] h-[calc(100%-3px)]">
@@ -237,7 +237,10 @@ export default function Home() {
               </div>
             </Link>
             {/* Project Card 3 */}
-            <Link href="/your-target-url" className="h-full w-full">
+            <Link
+              href="/your-target-url"
+              className="h-full w-full appear-down-to-up"
+            >
               <div className="card-wrapper-3 overflow-hidden bg-gray-800 rounded-lg relative w-full h-72 hover:scale-105 transition-transform ease-in-out duration-300">
                 <div className="card-content absolute rounded-lg bg-background top-[1.5px] left-[1.5px] w-[calc(100%-3px)] h-[calc(100%-3px)]">
                   <div className="flex flex-col justify-between rounded-lg h-[calc(100%-8px)] bg-custom-gradient m-1">
@@ -271,7 +274,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 lg:gap-12 xl:gap-16">
             {/* First Element */}
             <a href={mailtoLink}>
-              <div className="relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
+              <div className="appear-down-to-up relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
                 <Divider />
                 <div className="flex flex-row justify-between items-center group-hover:px-4 transition-all duration-300">
                   <div className="z-10 text-2xl font-medium transition-all duration-300 group-hover:text-black ">
@@ -297,7 +300,7 @@ export default function Home() {
             </a>
             {/* Second Element */}
             <a href="https://github.com/jjpp43">
-              <div className="relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
+              <div className="appear-down-to-up relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
                 <Divider />
                 <div className="flex flex-row justify-between items-center group-hover:px-4 transition-all duration-300">
                   <div className="z-10 text-2xl font-medium transition-all duration-300 group-hover:text-black ">
