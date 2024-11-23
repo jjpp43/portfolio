@@ -185,31 +185,19 @@ export default function Home() {
               <div className="card-wrapper-1 overflow-hidden bg-gray-800 rounded-lg relative w-full h-72 hover:scale-105 transition-transform ease-in-out duration-300">
                 <div className="card-content absolute rounded-lg bg-background top-[1.5px] left-[1.5px] w-[calc(100%-3px)] h-[calc(100%-3px)] ">
                   <div className="flex flex-col justify-between rounded-lg h-[calc(100%-8px)] bg-custom-gradient m-1">
+                    <div className="p-4">
+                      <Image src="/title.png" alt="" width="200" height="110" />
+                    </div>
                     <div>
-                      <div className="p-4">
-                        <Image
-                          src="/title.png"
-                          alt=""
-                          width="200"
-                          height="110"
-                        />
+                      <div className="flex flex-row">
+                        <div className="p-2 px-4 font-semibold text-lg">
+                          Pathway US
+                        </div>
+                        <Image alt="" src="/link.svg" width={24} height={24} />
                       </div>
-                      <div>
-                        <div className="flex flex-row">
-                          <div className="p-2 px-4 font-semibold text-lg">
-                            Pathway US
-                          </div>
-                          <Image
-                            alt=""
-                            src="/link.svg"
-                            width={24}
-                            height={24}
-                          />
-                        </div>
-                        <div className="p-4 pt-0 text-gray-400 text-sm">
-                          A comprehensive platform offering detailed information
-                          and comparisons for universities.
-                        </div>
+                      <div className="p-4 pt-0 text-gray-400 text-sm">
+                        A comprehensive platform offering detailed information
+                        and comparisons for universities.
                       </div>
                     </div>
                   </div>
