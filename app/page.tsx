@@ -5,8 +5,37 @@ import Badge from "./components/badge";
 import Link from "next/link";
 import { useClickScroll } from "./components/scrollContext";
 import { Divider } from "@nextui-org/react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
+  const [isContactVisible, setIsContactVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has run
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setTimeout(() => {
+            setIsContactVisible(true);
+            setHasAnimated(true); // Prevent animation from repeating
+          }, 300); // Adjust delay in milliseconds
+        }
+      },
+      { threshold: 0.5 } // Trigger when 10% of the element is visible
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
   const { aboutRef, projectsRef, contactRef } = useClickScroll();
   const email = "junnapark@gmail.com";
   const subject = "[Project Request]";
@@ -272,8 +301,14 @@ export default function Home() {
           <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 lg:gap-12 xl:gap-16">
             {/* First Element */}
             <a href={mailtoLink}>
-              <div className="appear-down-to-up relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
+              <div className=" relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
                 <Divider />
+                <div
+                  ref={elementRef}
+                  className={`absolute inset-0 bg-gray-200 z-20 transform duration-500 ${
+                    isContactVisible ? "-translate-y-full" : "translate-y-0"
+                  }`}
+                ></div>
                 <div className="flex flex-row justify-between items-center group-hover:px-4 transition-all duration-300">
                   <div className="z-10 text-2xl font-medium transition-all duration-300 group-hover:text-black ">
                     Email
@@ -292,14 +327,19 @@ export default function Home() {
                 <div className="z-10 text-base font-normal group-hover:px-4 text-gray-400 group-hover:text-black transition-all duration-300">
                   junnapark@gmail.com
                 </div>
-
                 <div className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-in-out transform -translate-y-full group-hover:translate-y-0"></div>
               </div>
             </a>
             {/* Second Element */}
             <a href="https://github.com/jjpp43">
-              <div className="appear-down-to-up relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
+              <div className=" relative flex flex-col w-60 pb-2 gap-2 group overflow-hidden">
                 <Divider />
+                <div
+                  ref={elementRef}
+                  className={`absolute inset-0 bg-gray-200 z-20 transform duration-500 ${
+                    isContactVisible ? "-translate-y-full" : "translate-y-0"
+                  }`}
+                ></div>
                 <div className="flex flex-row justify-between items-center group-hover:px-4 transition-all duration-300">
                   <div className="z-10 text-2xl font-medium transition-all duration-300 group-hover:text-black ">
                     Github
