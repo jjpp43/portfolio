@@ -2,7 +2,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col items-start py-16 px-8 sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-black">
+    <div className="flex flex-col items-start py-16 px-8 sm:px-20 md:px-24 lg:px-28 xl:px-32 bg-background">
       <div className="flex flex-col"></div>
       {/* Github Icon */}
       {/* <a
