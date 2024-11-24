@@ -20,7 +20,7 @@ export default function NavigationBar() {
     (current) => !current,
     false
   );
-  const { aboutRef, projectsRef } = useClickScroll();
+  const { aboutRef, projectsRef, contactRef } = useClickScroll();
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -85,7 +85,7 @@ export default function NavigationBar() {
         <NavbarItem isActive>
           <Link
             className="focus:outline-none cursor-pointer"
-            onClick={() => scrollToSection(projectsRef)}
+            onClick={() => scrollToSection(contactRef)}
           >
             <div className="relative flex flex-col group overflow-hidden">
               <div className="z-10 p-2 group-hover:px-4 transition-all duration-300 group-hover:text-background">
