@@ -12,7 +12,7 @@ export default function Home() {
   const email = "junnapark@gmail.com";
   const subject = "[Project Request]";
   const mailtoLink = `mailto:${email}?subject${encodeURIComponent(subject)}`;
-  const { scrollYProgress } = useScroll();
+
   return (
     <div className="w-screen bg-background pt-4">
       <div className="flex flex-col p-8 sm:px-20 sm:p-10 md:px-24 md:p-12 lg:px-28 lg:p-14 xl:px-32 xl:p-16">
@@ -21,9 +21,8 @@ export default function Home() {
             <div className="font-normal text-foreground text-[9vw]">
               <TypeAnimation
                 sequence={["Hard", 500, "Software", 1000]}
-                speed={3}
+                speed={1}
                 style={{ display: "inline-block" }}
-                repeat={1}
               />
             </div>
           </div>
@@ -35,7 +34,7 @@ export default function Home() {
         </div>
         <div className="flex flex-row justify-center py-20">
           {/* TextBox Area */}
-          <div className="font-normal text-gray-400 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed max-w-screen-sm">
+          <div className="flex-wrap appear-reveal font-normal text-gray-400 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed max-w-screen-sm">
             Hello, I'm{" "}
             <strong className="text-foreground font-grotesque text-xl md:text-2xl lg:text-3xl xl:text-4xl inline-block relative">
               {/* Invisible placeholder for reserving space */}
@@ -50,7 +49,7 @@ export default function Home() {
               <TypeAnimation
                 cursor={false}
                 sequence={["Junna Park", 1000]}
-                speed={5}
+                speed={1}
                 style={{ display: "inline-block", whiteSpace: "nowrap" }}
                 repeat={1}
               />
