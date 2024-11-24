@@ -5,7 +5,6 @@ import Badge from "./components/badge";
 import Link from "next/link";
 import { useClickScroll } from "./components/scrollContext";
 import { Divider } from "@nextui-org/react";
-import { motion, useScroll } from "motion/react";
 
 export default function Home() {
   const { aboutRef, projectsRef, contactRef } = useClickScroll();
