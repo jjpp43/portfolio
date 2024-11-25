@@ -57,7 +57,7 @@ body {
   .card-wrapper-1::before {
     background: conic-gradient(
       rgba(41, 172, 228, 0.4) 0deg,
-      rgba(41, 172, 228, 0.9) 0deg,
+      rgba(21, 170, 234, 0.9) 0deg,
       rgba(141, 222, 240, 0.4) 10deg,
       transparent 80deg
     );

@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      
       backgroundImage: {
         'custom-gradient': 'linear-gradient(180deg, #242424, #121212 65.62%)',
         'conic-gradient': 'conic-gradient(from 0deg, #ffffff, #000, 30deg, #000, 330deg, #fff)',
@@ -21,6 +22,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customBlue: "rgba(36, 182, 244, 0.9)",
+        customRed: "rgba(242, 51, 140, 0.9)",
+        customYellow: "rgba(246, 201, 39, 0.9)",
       },
       animation: {
         bounce: 'bounce 1.5s infinite ease-out',
