@@ -180,6 +180,9 @@ export default function Home() {
                 {/* First Row */}
                 <div className="appear-right-to-left flex flex-row flex-wrap pb-2 gap-2 px-4 font-normal text-sm ">
                   <Badge icon="figma" label="figma" />
+                  <Badge icon="framer" label="framer" />
+                </div>
+                <div className="appear-right-to-left flex flex-row flex-wrap pb-2 gap-2 px-4 font-normal text-sm ">
                   <Badge icon="notion" label="notion" />
                   <Badge icon="slack" label="slack" />
                 </div>
