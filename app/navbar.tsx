@@ -63,8 +63,7 @@ export default function NavigationBar() {
               <div className="z-10 p-2 group-hover:px-4 transition-all duration-300 group-hover:text-background">
                 About
               </div>
-              <Divider />
-              <div className="absolute inset-0 bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
+              <div className="absolute inset-[1px] bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
             </div>
           </Link>
         </NavbarItem>
@@ -77,8 +76,7 @@ export default function NavigationBar() {
               <div className="z-10 p-2 group-hover:px-4 transition-all duration-300 group-hover:text-background">
                 Projects
               </div>
-              <Divider />
-              <div className="absolute inset-0 bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
+              <div className="absolute inset-[1px] bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
             </div>
           </Link>
         </NavbarItem>
@@ -91,8 +89,7 @@ export default function NavigationBar() {
               <div className="z-10 p-2 group-hover:px-4 transition-all duration-300 group-hover:text-background">
                 Contact
               </div>
-              <Divider />
-              <div className="absolute inset-0 bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
+              <div className="absolute inset-[1px] bg-foreground rounded-t-lg transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0"></div>
             </div>
           </Link>
         </NavbarItem>
