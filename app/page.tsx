@@ -6,6 +6,9 @@ import Link from "next/link";
 import { useClickScroll } from "./components/scrollContext";
 import { Divider } from "@nextui-org/react";
 import { useState, useEffect, useRef } from "react";
+// Import reactbits
+import MagnetLines from "./components/reactbits/magnetLines";
+import SplashCursor from "./components/reactbits/splashCursor";
 
 export default function Home() {
   const [isContactVisible, setIsContactVisible] = useState(false);
@@ -43,7 +46,9 @@ export default function Home() {
 
   return (
     <div className="w-screen bg-background pt-4">
+      {/* <SplashCursor /> */}
       <div className="flex flex-col p-8 sm:px-20 sm:p-10 md:px-24 md:p-12 lg:px-28 lg:p-14 xl:px-32 xl:p-16">
+        {/* Software Developer */}
         <div className="">
           <div className="flex flex-row justify-between ">
             <div className="font-normal text-foreground text-[9vw]">
@@ -53,8 +58,10 @@ export default function Home() {
                 style={{ display: "inline-block" }}
               />
             </div>
+            <MagnetLines />
           </div>
-          <div className="flex flex-row justify-end">
+          <div className="flex flex-row justify-between">
+            <MagnetLines />
             <div className="font-normal text-foreground text-[9vw]">
               Developer
             </div>
@@ -93,6 +100,7 @@ export default function Home() {
               />
             </strong>
           </div>
+
           {/* Bouncing Arrow */}
           <div id="arrow" className="flex flex-col p-4 py-8 animate-bounce ">
             <svg
@@ -335,7 +343,7 @@ export default function Home() {
                 <div className="z-10 text-base font-normal group-hover:px-4 text-gray-400 group-hover:text-black transition-all duration-300">
                   junnapark@gmail.com
                 </div>
-                <div className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-in-out transform -translate-y-full group-hover:translate-y-0"></div>
+                <div className="absolute inset-[1px] bg-gray-200 transition-transform duration-500 ease-in-out transform -translate-y-full group-hover:translate-y-0"></div>
               </div>
             </a>
             {/* Second Element */}
@@ -367,7 +375,7 @@ export default function Home() {
                   jjpp43
                 </div>
 
-                <div className="absolute inset-0 bg-gray-200 transition-transform duration-500 ease-in-out transform -translate-y-full group-hover:translate-y-0"></div>
+                <div className="absolute inset-[1px] bg-gray-200 transition-transform duration-500 ease-in-out transform -translate-y-full group-hover:translate-y-0"></div>
               </div>
             </a>
           </div>
