@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+import ShinyText from "../reactbits/ShinyText";
 
 export default function Footer() {
   return (
@@ -24,7 +25,7 @@ export default function Footer() {
       {/* Copyright & Portfolio */}
       <div className="flex flex-row w-full justify-between">
         <div>&copy;Junna Park, All Rights Reserved.</div>
-        <div className="text-gray-300">2024 Portfolio</div>
+        <div className="text-gray-300">2025 Portfolio</div>
       </div>
     </div>
   );

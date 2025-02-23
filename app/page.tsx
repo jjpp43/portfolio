@@ -9,6 +9,8 @@ import { useState, useEffect, useRef } from "react";
 // Import reactbits
 import MagnetLines from "./components/reactbits/magnetLines";
 import SplashCursor from "./components/reactbits/splashCursor";
+import Threads from "../reactbits/Threads";
+import SplitText from "../reactbits/SplitText";
 
 export default function Home() {
   const [isContactVisible, setIsContactVisible] = useState(false);
@@ -46,7 +48,6 @@ export default function Home() {
 
   return (
     <div className="w-screen bg-background pt-4">
-      {/* <SplashCursor /> */}
       <div className="flex flex-col p-8 sm:px-20 sm:p-10 md:px-24 md:p-12 lg:px-28 lg:p-14 xl:px-32 xl:p-16">
         {/* Software Developer */}
         <div className="">
@@ -131,13 +132,34 @@ export default function Home() {
             </svg>
           </div>
         </div>
-
+        {/* Thread Animation */}
+        {/* <div className="lg:mt-[-400px] md:mt-[-400px] mt-[-600px]">
+          <div style={{ width: "100%", height: "800px", position: "relative" }}>
+            <Threads
+              amplitude={1}
+              distance={0}
+              enableMouseInteraction={false}
+            />
+          </div>
+        </div> */}
         {/* About Section */}
         <div
           ref={aboutRef}
           className="flex flex-col justify-start items-center py-16 md:py-24 lg:py-28 xl:py-32 text-4xl font-semibold"
         >
-          <div className="py-16">About</div>
+          <div className="py-16">
+            <SplitText
+              text="About"
+              className=""
+              delay={150}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+              onLetterAnimationComplete={undefined}
+            />
+          </div>
           <div className="flex flex-row gap-4">
             <div className="flex flex-col items-end">
               <div className="grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
@@ -204,7 +226,17 @@ export default function Home() {
           ref={projectsRef}
           className=" flex flex-row justify-center py-16 text-4xl font-semibold"
         >
-          Projects
+          <SplitText
+            text="Projects"
+            className=""
+            delay={150}
+            animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+            animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+            easing="easeOutCubic"
+            threshold={0.2}
+            rootMargin="-50px"
+            onLetterAnimationComplete={undefined}
+          />
         </div>
 
         <div
@@ -244,7 +276,7 @@ export default function Home() {
             </Link>
             {/* Project Card 2 */}
             <Link
-              href="https://travel-korea.vercel.app"
+              href="https://hackai-chatbot.vercel.app/"
               className="h-full w-full appear-down-to-up"
             >
               <div className="card-wrapper-2 overflow-hidden bg-gray-800 rounded-lg relative w-full h-72 hover:scale-105 transition-transform ease-in-out duration-300">
@@ -261,13 +293,14 @@ export default function Home() {
                     <div>
                       <div className="flex flex-row">
                         <div className="p-2 px-4 font-semibold text-lg">
-                          Travel Korea
+                          Mental Health AI Assistant
                         </div>
                         <Image alt="" src="/link.svg" width={24} height={24} />
                       </div>
                       <div className="p-4 pt-0 text-gray-400 text-sm">
-                        Editorially designed landing page for tourists,
-                        highlighting South Korea’s iconic cities.
+                        Mental Health AI Assistant for AI Hackathon.
+                        <br />
+                        Google Gemini + Nextjs
                       </div>
                     </div>
                   </div>
@@ -312,7 +345,17 @@ export default function Home() {
         {/* Contact Section */}
         <div className="flex flex-col justify-start items-center py-16 md:py-24 lg:py-28 xl:py-32 text-4xl font-semibold">
           <div className="py-16" ref={contactRef}>
-            Contact
+            <SplitText
+              text="Contact"
+              className=""
+              delay={150}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+              onLetterAnimationComplete={undefined}
+            />
           </div>
           <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 lg:gap-12 xl:gap-16">
             {/* First Element */}
