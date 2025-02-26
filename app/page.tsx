@@ -10,6 +10,7 @@ import { useState, useEffect, useRef } from "react";
 import MagnetLines from "./components/reactbits/magnetLines";
 import SplashCursor from "./components/reactbits/splashCursor";
 import Threads from "../reactbits/Threads";
+import TiltedCard from "../reactbits/TiltedCard";
 import SplitText from "../reactbits/SplitText";
 
 export default function Home() {
@@ -221,6 +222,7 @@ export default function Home() {
           </div>
         </div>
         <div className="py-16"></div>
+
         {/* Project Section */}
         <div
           ref={projectsRef}
@@ -384,7 +386,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="z-10 text-base font-normal group-hover:px-4 text-gray-400 group-hover:text-black transition-all duration-300">
-                  junnapark@gmail.com
+                  junnapark@junna.dev
                 </div>
                 <div className="absolute inset-[1px] bg-gray-200 transition-transform duration-500 ease-in-out transform -translate-y-full group-hover:translate-y-0"></div>
               </div>
