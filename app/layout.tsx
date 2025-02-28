@@ -4,6 +4,7 @@ import NavigationBar from "./navbar";
 import Footer from "./footer";
 import { ScrollProvider, ScrollProgress } from "./components/scrollContext";
 import { raleway } from "./fonts";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Software Developer Portfolio",
@@ -17,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <body className={`${raleway.className} `}>
         <ScrollProgress />
         <ScrollProvider>
