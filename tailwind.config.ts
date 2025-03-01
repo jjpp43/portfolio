@@ -33,11 +33,17 @@ const config: Config = {
         "badge-spin": "border-spin 2.5s linear infinite",
         slideDown: "slideDown 0.5s ease-in-out forwards",
         shine: "shine 5s linear infinite",
+        gradient: "gradient 8s linear infinite",
       },
       transitionDelay: {
         "delay-200": "delay-100",
       },
       keyframes: {
+        gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
         shine: {
           "0%": { "background-position": "100%" },
           "100%": { "background-position": "-100%" },

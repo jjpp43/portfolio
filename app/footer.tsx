@@ -1,5 +1,4 @@
 import { FaGithub } from "react-icons/fa";
-import ShinyText from "../reactbits/ShinyText";
 
 export default function Footer() {
   return (
